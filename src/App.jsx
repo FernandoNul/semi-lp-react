@@ -21,7 +21,7 @@ function App() {
     const mensagem = `Gostaria de entrar em contato! \n\nNome: ${Nome} \nAssunto: ${assunto}`
     const msg = encodeURIComponent(mensagem)
     
-    window.open(`httmps://wa.me/5541999999999?text=${esg}`)
+    window.open(`httmps://wa.me/*************?text=${esg}`)
   }
  
 

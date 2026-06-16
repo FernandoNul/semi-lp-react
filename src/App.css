@@ -57,7 +57,7 @@ section{
 
 }
 
-.s1{
+s1{
     font-size: 80px;
     background-image: url(../public/bg.jpg);
     background-position: center;
@@ -93,7 +93,7 @@ section{
         opacity: 0;
     }
 }
-s1 h2{
+.s1 h2{
     color: aliceblue;
     font-size: 32px;
     text-shadow: 0px 3px 10px black;
@@ -108,7 +108,7 @@ s1 h2{
         opacity: 0;
     }
 }
-.s4{
+s4{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -228,6 +228,7 @@ a{
     overflow: hidden;
     border-radius: 40px;
     box-shadow: 0px 3px 10px #090909;
+    justify-content: center;
 }
 
 .card img{
