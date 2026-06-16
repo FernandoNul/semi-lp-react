@@ -93,7 +93,7 @@ section{
         opacity: 0;
     }
 }
-.s1 h2{
+s1 h2{
     color: aliceblue;
     font-size: 32px;
     text-shadow: 0px 3px 10px black;
@@ -284,7 +284,7 @@ footer a img:hover{
         height: 315px;
         border-radius: 0px;
     }
-    .s1{
+    s1{
         background-image: url('../public/bg2.jpg');
     }
 }
