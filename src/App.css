@@ -57,8 +57,7 @@ section{
 
 }
 
-s1{
-    font-size: 80px;
+.s1{
     background-image: url(../public/bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -108,7 +107,7 @@ s1{
         opacity: 0;
     }
 }
-s4{
+.s4{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -218,6 +217,10 @@ a{
     flex-wrap: wrap;
     gap:20px;
     padding: 10px;
+    background-image: url(../public/pad.jpg);
+    background-position: center;
+    
+    
 }
 .card{
     background-color: cornflowerblue;
@@ -228,12 +231,15 @@ a{
     overflow: hidden;
     border-radius: 40px;
     box-shadow: 0px 3px 10px #090909;
-    justify-content: center;
+
 }
 
 .card img{
+    
     width: 100%;
-    height: auto;
+    height: 100%,70%,70%;
+    object-fit: cover;
+    
 }
 
 .textcard{
@@ -285,7 +291,7 @@ footer a img:hover{
         height: 315px;
         border-radius: 0px;
     }
-    s1{
+    .s1{
         background-image: url('../public/bg2.jpg');
     }
 }

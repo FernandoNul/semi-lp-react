@@ -53,7 +53,7 @@ function App() {
 
       <section id="s3" class="s3">
         <div class="card">
-          <img src="../public/UP.jpg" alt="" />
+          <img src="../public/UP.jpg" width={300} height={500} alt="" />
           <div class="textCard">
             <h4>Arara 01</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -61,7 +61,7 @@ function App() {
         </div>
 
         <div class="card">
-          <img src="../public/up2.jpg" alt="" />
+          <img src="../public/up2.jpg" width={300} height={500} alt="" />
           <div class="textCard">
             <h4>Arara 02</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -69,7 +69,7 @@ function App() {
         </div>
 
         <div class="card">
-          <img src="../public/up3.jpg" alt="" />
+          <img src="../public/up3.jpg" width={300} height={500} alt="" />
           <div class="textCard">
             <h4>Arara 03</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
