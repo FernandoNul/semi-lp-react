@@ -1,0 +1,376 @@
+.page {
+  min-height: 100vh;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 50px;
+  background-color: var(--nav-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  z-index: 1000;
+  box-shadow: var(--shadow-soft);
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  opacity: 0.75;
+  transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.navItem:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.navItem img {
+  width: 20px;
+  height: auto;
+}
+
+.navWords {
+  font-size: 14px;
+}
+
+.hero {
+  min-height: 100vh;
+  background-image: url('/images/brecho.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  padding: 90px 20px 20px;
+}
+
+:global(body.dark-mode) .hero {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('/images/brecho.jpg');
+}
+
+.hero h1 {
+  font-size: clamp(64px, 10vw, 120px);
+  word-break: break-word;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0px 3px 10px black;
+  width: 100%;
+  padding-top: 3vh;
+  animation: esquerda 2s ease-in-out;
+}
+
+.hero h2 {
+  color: aliceblue;
+  font-size: clamp(20px, 3vw, 32px);
+  text-shadow: 0px 3px 10px black;
+  width: 100%;
+  animation: direita 2s ease-in-out;
+}
+
+.toggleBtn,
+.toggleBtnDark {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+  transition: 0.4s linear;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.toggleBtn {
+  background: url('/icons/light.png') no-repeat center;
+  background-size: cover;
+}
+
+.toggleBtnDark {
+  background: url('/icons/dark.png') no-repeat center;
+  background-size: cover;
+}
+
+.circle,
+.circleDark {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  top: 8px;
+  transition: 0.4s linear;
+}
+
+.circle {
+  left: 90px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.circleDark {
+  left: 4px;
+  background-color: rgba(51, 51, 51, 0.6);
+}
+
+.circle::before,
+.circle::after,
+.circleDark::before,
+.circleDark::after {
+  content: '';
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  animation: waves 1s linear infinite;
+}
+
+.circleDark::before,
+.circleDark::after {
+  border: 1px solid #333;
+}
+
+.circle::after,
+.circleDark::after {
+  animation-delay: 0.5s;
+}
+
+.toggleBtn i,
+.toggleBtnDark i {
+  font-size: 22px;
+  line-height: 44px;
+  transition: 0.5s linear;
+}
+
+:global(body.dark-mode) .toggleBtnDark i {
+  transform: rotate(360deg);
+}
+
+.fa-sun {
+  color: #d4ac0d;
+}
+
+.fa-moon {
+  color: #eaf2f8;
+}
+
+.products,
+.contact {
+  min-height: 100vh;
+  background-color: var(--surface-bg);
+  padding: 90px 16px 24px;
+}
+
+.products {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.products h1 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cardsGrid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  color: var(--form-bg);
+  font-size: 20px;
+  width: min(400px, 100%);
+  height: 600px;
+  overflow: hidden;
+  border-radius: 40px;
+  box-shadow: var(--shadow-soft);
+}
+
+.card img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.textsCard {
+  padding: 10px;
+}
+
+.textsCard h4 {
+  margin-bottom: 10px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.formulario {
+  background-color: var(--form-bg);
+  color: var(--form-text);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 10px;
+  width: min(100%, 360px);
+}
+
+.formulario label {
+  width: 100%;
+  margin-bottom: -10px;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: transparent;
+  color: var(--form-text);
+}
+
+.formulario input {
+  border-bottom: 2px solid var(--input-border);
+}
+
+.formulario input:focus {
+  outline: none;
+  border-bottom: 2px solid cornflowerblue;
+}
+
+.formulario textarea {
+  min-height: 150px;
+  max-height: 150px;
+  min-width: 100%;
+  max-width: 100%;
+  border: 2px solid var(--input-border);
+  resize: none;
+}
+
+.formulario textarea:focus {
+  outline: none;
+}
+
+.formulario button {
+  border: none;
+  border-radius: 5px;
+  border: 2px solid var(--input-border);
+  padding: 10px;
+  background: var(--button-bg);
+  color: var(--button-text);
+  transition: all 200ms linear;
+  width: 100%;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background: rgb(216, 38, 38);
+  color: #090909;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 10px;
+  gap: 10px;
+  background-color: var(--footer-bg);
+}
+
+.footer a img {
+  width: 20px;
+  border-radius: 999px;
+  opacity: 0.7;
+  transition: all 200ms ease-in-out;
+}
+
+.footer a img:hover {
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(1.1) translateY(-5px);
+}
+
+@keyframes waves {
+  to {
+    transform: scale(1.4);
+    opacity: 0.3;
+  }
+}
+
+@keyframes esquerda {
+  0% {
+    transform: translateY(-70px);
+    opacity: 0;
+  }
+}
+
+@keyframes direita {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+
+@media (width <= 800px) {
+  .nav {
+    height: auto;
+    gap: 5vw;
+    padding: 10px 16px;
+  }
+
+  .navWords {
+    display: none;
+  }
+
+  .hero {
+    background-attachment: scroll;
+  }
+
+  .hero h1 {
+    word-break: keep-all;
+  }
+
+  .card {
+    height: auto;
+  }
+}

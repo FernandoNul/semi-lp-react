@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet"
+    />
+  </head>
+  <body>
+    
+    <nav>
+      <span class="navItem" onclick="navTo('s1')">
+        <img src="../icons/home-icon-house-icon-illustration-perfect-for-all-project-vector.jpg" alt="Home">
+        <p class="navWords">Home</p>
+      </span>
+      
+    </span>
+    <span class="navItem" onclick="navTo('s3')">
+      <img src="../icons/box.png" alt="Product">
+      <p class="navWords">Produtos</p>
+    <span class="navItem" onclick="navTo('s5')">
+      <img src="../icons/phone.png" alt="Contatos">
+      <p class="navWords">Contatos</p>
+    </span>
+    
+    
+    
+  </nav>
+  <main>
+    <section id="s1" class="s1">
+      <button class="toggle-btn">
+        <span class="circle"><i class="icon fas fa-sun"></i></span>
+      </button>
+      <h1>"Brecho"</h1>
+      <h2>roupas e consertos entre em contato!!!!</h2>
+    </section>
+    
+    <section id="s3"class="s3">
+      <h1>Produtos</h1>
+      <div class="card">
+        <img src="../images/roupa1.jpg" alt="">
+        <div class="textsCard">
+          <h4>roupa1</h4>
+          <p>Mikey e Minnie</p>
+        </div>
+      </div>
+      
+        <div class="card">
+          <img src="../images/roupa2.jpg" alt="">
+          <div class="textsCard">
+            <h4>roupa</h4>
+            <p>Camisa de ciclismo</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="../images/roupa3.jpg" >
+          
+          <div class="textsCard">
+            <h4>roupa</h4>
+            <p>Ursinho</p>
+          </div>
+        </div>
+      </section>
+      <section id="s5"class="s5">
+          <div class="formulario">
+            <label for="nome">Digite seu nome</label>
+            <input type="text"  id="nome" placeholder="Insira seu nome">
+            <label for="assunto">Assunto</label>
+            <textarea  id="assunto" placeholder="Insira sua mensagem"></textarea>
+            <button onclick="enviar()">ENVIAR</button>
+          </div>
+
+      </section>
+    </main>
+    <footer>
+        <a href="https://facebook.com" target="_blank">
+            <img  width="20px" src="../icons/faceic.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/luis.fernando_mk/" target="_blank">
+            <img  width="20px" src="../icons/insta ico.png" alt="Instagram">
+        </a>
+        <a href="https://linkedin.com" target="_blank">
+            <img  width="20px" src="../icons/linkedin ico.png" alt="Linkedin">
+        </a>
+        <a href="https://github.com/FernandoNul" target="_blank">
+            <img  width="20px" src="../icons/github ico.png" alt="Github">
+        </a>
+        
+        
+
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

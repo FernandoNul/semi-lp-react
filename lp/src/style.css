@@ -1,0 +1,496 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html{
+    background-color: var(--page-bg);
+
+
+    position: relative;
+    --page-bg: #ddd;
+    --page-text: #333;
+    --nav-bg: #fff;
+    --surface-bg: #f6f6f6;
+    --surface-strong: #e9e9e9;
+    --card-bg: #5d8fe8;
+    --form-bg: #111;
+    --form-text: #fff;
+    --input-border: #fff;
+    --button-bg: cadetblue;
+    --button-text: #fff;
+    --footer-bg: #999;
+    --shadow-soft: 0px 3px 10px rgba(0, 0, 0, 0.35);
+    --shadow-strong: 0px 3px 10px rgba(0, 0, 0, 0.55);
+}
+
+body{
+    font-family: "Roboto Mono", monospace;
+    background-color: var(--page-bg);
+    color: var(--page-text);
+    transition: .2ms ease-in-out;
+    padding-top: 50px;
+    margin: auto;
+    color: var(--page-text);
+    
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: var(--nav-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: deCima 2s linear;
+}
+@keyframes deCima{
+    0%{
+        transform:translateY(-70px);
+    }
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.navItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    opacity: 0.7;
+    transition: all 200ms ease-in-out;
+}
+.navItem:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.navItem img{
+    width: 20px;
+    height: auto;
+}
+
+body.dark-mode{
+    background-color: #1b1b1b;
+    color: #e8e8e8;
+    --page-bg: #1b1b1b;
+    --page-text: #e8e8e8;
+    --nav-bg: #111;
+    --surface-bg: #111;
+    --surface-strong: #1a1a1a;
+    --card-bg: #1d3557;
+    --form-bg: #1a1a1a;
+    --form-text: #ddd;
+    --input-border: #ddd;
+    --button-bg: #2f6f73;
+    --button-text: #fff;
+    --footer-bg: #111;
+    --shadow-soft: 0px 3px 10px rgba(0, 0, 0, 0.55);
+    --shadow-strong: 0px 3px 10px rgba(0, 0, 0, 0.55);
+}
+
+.dark-mode nav{
+        box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
+}
+
+.dark-mode .s3,
+.dark-mode .s5,
+.dark-mode footer{
+        background-color: var(--surface-bg);
+        color: var(--page-text);
+}
+
+.dark-mode .s1{
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url('../images/bg.jpg');
+}
+
+
+.dark-mode .card{
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow-strong);
+}
+
+.dark-mode .formulario{
+    background-color: var(--form-bg);
+    box-shadow: var(--shadow-strong);
+}
+
+.dark-mode .formulario input,
+.dark-mode textarea{
+    border-color: var(--input-border);
+    color: var(--form-text);
+}
+
+.dark-mode .formulario input:focus,
+.dark-mode textarea:focus{
+    border-bottom-color: #7aa2f7;
+}
+
+h1{
+  margin: 40px;
+}
+
+p{
+  margin: 10px 0;
+  line-height: 25px;
+  text-align: justify;
+  padding: 20px;
+  max-width: 500px;
+  margin: 10px auto;
+}
+
+.toggle-btn{
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+  width: 140px;
+  height: 60px;
+  background: url("../icons/light.png") no-repeat center;
+  background-size: cover;
+  border-radius: 30px;
+  border: none;
+  transition: .4s linear;
+  cursor: pointer;
+    z-index: 2;
+}
+
+.dark-mode .toggle-btn{
+  background: url("../icons/dark.png") no-repeat center;
+  background-size: cover;
+}
+
+.circle{
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, .6);
+  border-radius: 22px;
+  top: 8px;
+  left: 90px;
+  transition: .4s linear;
+}
+
+.dark-mode .circle{
+  position: absolute;
+  top: 8px;
+  left: 4px;
+  background-color: rgba(51, 51, 51, .6);
+}
+
+.circle::before,
+.circle::after{
+  content: "";
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  animation: waves 1s linear infinite;
+}
+
+.dark-mode .circle::before,
+.dark-mode .circle::after{
+  border: 1px solid #333;
+}
+
+.circle::after{
+  animation-delay: .5s;
+}
+
+@keyframes waves{
+  to{
+    transform: scale(1.4);
+    opacity: .3;
+  }
+}
+
+.toggle-btn i{
+  font-size: 22px;
+  line-height: 44px;
+  transition: .5s linear;
+}
+
+.dark-mode .toggle-btn i{
+  transform: rotate(360deg);
+}
+
+.fa-sun{
+  color: #d4ac0d;
+}
+
+.fa-moon{
+  color: #eaf2f8;
+}
+
+
+
+section{
+    min-height: 100vh;
+    height: auto;
+    margin: 0;
+    
+}
+
+.s1{
+    background-image: url(../images/brecho.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    padding-top: 3vh;
+    padding: 20px;
+
+}
+
+.s1 h1{
+    font-size: 120px;
+    word-break: break-all;
+    color: #ffff;
+    text-transform: uppercase;
+    text-shadow: 0px 3px 10px black;
+    text-align: center;
+    width: 100%;
+    padding-top: 3vh;
+    animation: esquerda 2s ease-in-out;
+}
+
+@keyframes esquerda{
+    0%{
+        transform: translateY(-70px);
+        opacity: 0;
+    }
+}
+.s1 h2{
+    color: aliceblue;
+    font-size: 32px;
+    text-shadow: 0px 3px 10px black;
+    width: 100%;
+    text-align: center;
+    animation: direita 2s ease-in-out;
+    
+}
+@keyframes direita{
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
+
+.circles::after{
+    animation-delay: .2s;
+}
+@keyframes waves{
+    to{
+        transform: scale(1.4);
+        opacity: .3;
+    }
+    
+}
+
+
+
+.s5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    background-color: var(--surface-bg);
+}
+
+.formulario{
+    background-color: var(--form-bg);
+    color: var(--form-text);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+
+.formulario label{
+    width: 100%;
+    margin-bottom: -10px;
+    padding-left: 2px solid white;
+}
+
+.formulario input{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: transparent;
+    color: var(--form-text);
+    border-bottom: 2px solid var(--input-border);
+    width: 100%;
+}
+/* botao "insra seu nome" */
+input:focus{
+    outline: none;
+    color: var(--form-text);
+    border-bottom: 2px solid cornflowerblue;
+}
+/* borda do "Assunto" */
+textarea{
+    max-width: 250px;
+    min-width: 250px;
+    min-height: 150px;
+    max-height: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid var(--input-border);
+    background: transparent;
+    color: var(--form-text);
+}
+
+textarea:focus{
+    outline: none;
+}
+
+/* botao "ENVIAR" */
+button{
+    border: none;
+    border-radius: 5px;
+    border: 2px solid var(--input-border);
+    padding: 10px;
+    background: var(--button-bg);
+    color: var(--button-text);
+    transition: all 200ms linear;
+    width: 100%;
+    
+}
+
+
+button:hover{
+    background:  rgb(216, 38, 38);
+    color: #090909;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+
+}
+
+.s3{
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:20px;
+    padding: 10px;
+    background-color: var(--surface-bg);
+    
+    
+}
+
+.s3 h1{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.card{
+    background-color: var(--card-bg);
+    color: var(--form-bg);
+    font-size: 20px;
+    width: 400px;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 40px;
+    box-shadow: var(--shadow-soft);
+    
+}
+
+.card img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    
+}
+
+
+.textcard{
+    padding: 10px;
+}
+
+.textCard h4{
+    margin-bottom: 10px;
+}
+
+
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 10px;
+    gap: 10px;
+    background-color: var(--footer-bg);
+    
+}
+
+footer a img{
+    border-radius: 999px;
+    opacity: 0.7;
+    transition:all 200ms ease-in-out;
+    
+}
+
+footer a img:hover{
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.1) translateY(-5px);
+}
+
+@media(width<= 800px){
+    nav{
+        height: auto;
+        gap: 5vw;
+    }
+    body{
+        padding-top: 80px;
+    }
+    .navItem img{
+        width: 50px;
+    }
+
+    .navWords{
+        display: none;
+    }
+    .video{
+        width: 100%;
+        height: 315px;
+        border-radius: 0px;
+    }
+    .s1{
+        background-image: url('../images/brecho.jpg');
+    }
+}
